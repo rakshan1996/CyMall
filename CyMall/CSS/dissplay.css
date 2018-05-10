@@ -1,0 +1,53 @@
+﻿.row {
+    height: 100%
+}
+
+
+
+.image_view {
+    padding: 0px 10px 20px 10px;
+}
+
+.LOGO {
+    left: 0;
+    text-align: end;
+}
+
+
+
+
+html, body {
+    overflow-x: auto;
+}
+
+img {
+    max-width: initial;
+    width: auto;
+}
+
+.display-left {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    opacity: 0.5;
+}
+
+views {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+}
+
+.display-right {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    opacity: 0.5;
+}
+
+
+.col-lg-3 {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 20px;
+}

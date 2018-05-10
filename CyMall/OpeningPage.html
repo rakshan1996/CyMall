@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="Scripts/moving_images.js"></script>
+    <script type="text/javascript" src="Scripts/getCategories.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/OnLoad.js"></script>
+    <script type="text/javascript" src="Scripts/displayBrand.js"></script>
+    <script type="text/javascript" src="Scripts/display_cart.js"></script>
+    <script type="text/javascript" src="Scripts/add_to_cart.js"></script>
+    <link rel="stylesheet" href="CSS/navbar_stylesheet.css" />
+    <link rel="stylesheet" href="CSS/dissplay.css" />
+    <link rel="stylesheet" href="CSS/dropdown.css" />
+    <meta charset="utf-8" />
+    <title>CyMall</title>
+</head>
+<body onload="loadData()" >
+   
+    <nav class="navbar navbar-default" >
+        <div class="navbar-header">
+          <h1>
+             <a href="OpeningPage.html">CyMall</a> </h1>
+         </div>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+                <li>
+                    <div class="dropdown">
+                        <a href="cart_info.html" class="dropbtn" ><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                        <div class="dropdown-content" id="cart_item">
+
+                        </div>
+                    </div>
+                </li>
+            </ul>    
+                </div>
+                
+            
+        
+    </nav>
+    
+    <div class="sidenav">
+
+        <div class="dropdown categories_dropdown">
+            <a class="dropbtn" >categories</a>
+            <div class="dropdown-content" id="dropdown_ha">
+                
+            </div>
+        </div>
+        <div class="dropdown brand_dropdown">
+            <a class="dropbtn" >Brands</a>
+            <div class="dropdown-content" id="sh_brand">
+
+                
+
+            </div>
+        </div>       
+        <a href="#clients">On Sale</a>
+        <a href="#contact">Reach us</a>
+    </div>
+    <div class="container">
+       <div class="row">
+        
+           <img class="mySides" src="images/test.jpg" style="display:block"/>
+        <img class="mySides" src="images/test1.jpg" />
+        <img class="mySides" src="images/test2.jpg" />
+        <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="display-right" onclick="plusDivs(1)">&#10095;</button>
+    
+    </div>   
+       <div class="row"id="row1">
+          <div class="col-lg-12">
+
+          </div>
+          
+           </div>
+         
+       </div>
+    
+
+</body>
+</html>
