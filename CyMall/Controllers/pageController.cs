@@ -85,6 +85,16 @@ namespace CyMall.Controllers
             }
         }
 
+
+        public void Delete(int id)
+        {
+            using (CyMallEntities1 entities = new CyMallEntities1())
+            {
+                entities.carts.Remove(entities.carts.First(e=> e.product_id==id));
+                entities.SaveChanges();
+            }
+        }
+
         
 
 

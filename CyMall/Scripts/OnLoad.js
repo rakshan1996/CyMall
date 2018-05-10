@@ -73,7 +73,7 @@ function load_cart_data() {
                     quant = data[index].quantity;                    
                 }
                
-                elements.append("<div class='col-lg-4'>" + "<div class='card'>" + "<div class='card-image'>" + "<img src=\"" + product_12.image_name + "\"/>" + "</div>" + "<span class='card-title'>" + product_12.product_name + "</span>" + "<div class='card-content'>" + "<p>" + "₹" + product_12.cost + "</p>" + "<p>" + "Quantity: " + quant + "</p>" + "<div class='card-action'>" + "<a>" + "Buy" + "</a>" + "<span>" + "     " + "</span>" + "<a onclick=" + "\"remove_cart(" + product_12.product_id + ")\">" + " remove" + " </a>" + "</div>" + "</div>" + "</div>" + "</div>");
+                elements.append("<div class='col-lg-4'>" + "<div class='card'>" + "<div class='card-image'>" + "<img src=\"" + product_12.image_name + "\"/>" + "</div>" + "<span class='card-title'>" + product_12.product_name + "</span>" + "<div class='card-content'>" + "<p>" + "₹" + product_12.cost + "</p>" + "<p>" + "Quantity: " + quant + "</p>" + "<div class='card-action'>"  + "<a onclick=" + "\"remove_cart(" + product_12.product_id + ")\">" + " remove" + " </a>" + "</div>" + "</div>" + "</div>" + "</div>");
 
                
             })
@@ -97,9 +97,10 @@ function update_cart() {
 
                 if (data[index].product_id == product_12.product_id) {
                     quant = data[index].quantity;
+                    
                 }
 
-                elements.append("<div class='col-lg-4'>" + "<div class='card'>" + "<div class='card-image'>" + "<img src=\"" + product_12.image_name + "\"/>" + "</div>" + "<span class='card-title'>" + product_12.product_name + "</span>" + "<div class='card-content'>" + "<p>" + "₹" + product_12.cost + "</p>" + "<p>" + "Quantity: " + quant + "</p>" + "<div class='card-action'>" + "<a>" + "Buy" + "</a>" + "<span>" + "     " + "</span>" + "<a onclick=" + "\"remove_cart(" + product_12.product_id + ")\">" + " remove" + " </a>" + "</div>" + "</div>" + "</div>" + "</div>");
+                elements.append("<div class='col-lg-4'>" + "<div class='card'>" + "<div class='card-image'>" + "<img src=\"" + product_12.image_name + "\"/>" + "</div>" + "<span class='card-title'>" + product_12.product_name + "</span>" + "<div class='card-content'>" + "<p>" + "₹" + product_12.cost + "</p>" + "<p>" + "Quantity: " + quant + "</p>" + "<div class='card-action'>"  + "<a onclick=" + "\"remove_cart(" + product_12.product_id + ")\">" + " remove" + " </a>" + "</div>" + "</div>" + "</div>" + "</div>");
 
 
             })

@@ -32,7 +32,36 @@
 }
 
 function remove_cart(id) {
+    var product;
+
+    $.get("http://localhost:50403/api/cart", function (data, status) {
+        console.log(data);
+        $.each(data, function (index) {
+            console.log(data[index].quantity);
+            if (data[index].quantity == 0) {
+                $.ajax({
+                    type: 'DELETE',
+                    url: "http://localhost:50403/api/cart/" + data[index].product_id
+
+                });
+            }
+
+        });
+    });
     
-    $.post("http://localhost:50403/api/cart/"+id, JSON);
-    update_cart();
+    
+    $.get("http://localhost:50403/api/cart", function (data, status) {
+
+        product = data.find(function (cart) {
+            return cart.product_id == id;
+        });
+
+        if (product != null) {
+            $.post("http://localhost:50403/api/cart/" + id, JSON);
+        }
+        
+            
+        
+            update_cart();
+    });
 }
