@@ -13,7 +13,7 @@
                 product = data.find(function (product) {
                     return product.product_id == id;
                 });
-                var objec= {
+                var objec = {
                     'product_id': product.product_id,
                     'quantity': 1
                 }
@@ -21,6 +21,10 @@
 
             });
 
+        }
+        else {
+            $.post("http://localhost:50403/api/updateCart/"+ id, JSON);
+            update_cart();
         }
         
 

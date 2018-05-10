@@ -69,6 +69,7 @@ namespace CyMall.Controllers
             }
 
         }
+        
 
         public void post(int id)
         {
@@ -76,7 +77,7 @@ namespace CyMall.Controllers
             {
                 var entity = entities.carts.First(e => e.product_id == id);
                 
-                if (entity.quantity >= 0)
+                if (entity.quantity > 0)
                 {
                     entity.quantity = entity.quantity - 1;
                     entities.SaveChanges();
@@ -85,8 +86,6 @@ namespace CyMall.Controllers
         }
 
         
-
-
 
 
     }
