@@ -242,11 +242,21 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="cart_info.html" />
+    <Content Include="images\headphone1.jpg" />
+    <Content Include="images\headphone2.jpg" />
+    <Content Include="images\headphone3.jpg" />
+    <Content Include="images\laptop1.jpg" />
+    <Content Include="images\laptop2.jpg" />
+    <Content Include="images\laptop3.jpg" />
+    <Content Include="images\laptop4.jpg" />
+    <Content Include="images\mobile1.jpg" />
+    <Content Include="images\mobile2.jpg" />
     <Content Include="images\test.jpg" />
     <Content Include="images\test1.jpg" />
     <Content Include="images\test2.jpg" />
-    <Content Include="images\test4.jpg" />
-    <Content Include="images\Untitled.png" />
+    <Content Include="images\trimmer1.jpg" />
+    <Content Include="images\trimmer2.jpg" />
+    <Content Include="images\tv1.jpg" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

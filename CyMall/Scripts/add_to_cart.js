@@ -1,4 +1,6 @@
-﻿function add_to_cart(id) {
+﻿
+
+function add_to_cart(id) {
     var product;
     $.get("http://localhost:50403/api/cart", function (data, status) {
 
@@ -24,7 +26,7 @@
         }
         else {
             $.post("http://localhost:50403/api/updateCart/"+ id, JSON);
-            update_cart();
+            
         }
         
 
@@ -32,36 +34,31 @@
 }
 
 function remove_cart(id) {
-    var product;
-
-    $.get("http://localhost:50403/api/cart", function (data, status) {
-        console.log(data);
-        $.each(data, function (index) {
-            console.log(data[index].quantity);
-            if (data[index].quantity == 0) {
-                $.ajax({
-                    type: 'DELETE',
-                    url: "http://localhost:50403/api/cart/" + data[index].product_id
-
-                });
-            }
-
-        });
-    });
-    
-    
+    var product;    
     $.get("http://localhost:50403/api/cart", function (data, status) {
 
         product = data.find(function (cart) {
             return cart.product_id == id;
         });
-
+       
         if (product != null) {
-            $.post("http://localhost:50403/api/cart/" + id, JSON);
+            if (product.quantity <= 1) {
+                delete_from_cart(id);
+                update_cart();
+            }
+            else {
+                $.post("http://localhost:50403/api/cart/" + id, JSON);
+                update_cart();
+            }
+
+        }
+        else {
+            
+            if (data.length == 0) {
+                var elements = $('#cart_item');
+                elements.empty();
+            }
         }
         
-            
-        
-            update_cart();
     });
 }

@@ -75,13 +75,16 @@ namespace CyMall.Controllers
         {
             using (CyMallEntities1 entities = new CyMallEntities1())
             {
-                var entity = entities.carts.First(e => e.product_id == id);
                 
-                if (entity.quantity > 0)
-                {
-                    entity.quantity = entity.quantity - 1;
-                    entities.SaveChanges();
-                }
+                    var entity = entities.carts.First(e => e.product_id == id);
+
+                    if (entity.quantity > 0)
+                    {
+                        entity.quantity = entity.quantity - 1;
+                        entities.SaveChanges();
+                    }
+
+                
             }
         }
 
@@ -90,12 +93,11 @@ namespace CyMall.Controllers
         {
             using (CyMallEntities1 entities = new CyMallEntities1())
             {
-                entities.carts.Remove(entities.carts.First(e=> e.product_id==id));
+
+                entities.carts.Remove(entities.carts.First(e => e.product_id == id));
                 entities.SaveChanges();
             }
-        }
-
-        
+        }     
 
 
     }
